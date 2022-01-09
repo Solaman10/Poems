@@ -1,3 +1,8 @@
+/*
+i/p: awwsb
+o/p: a1w2s1b1
+*/
+
 #include<iostream>
 using namespace std;
 
