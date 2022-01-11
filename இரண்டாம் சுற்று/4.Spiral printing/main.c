@@ -21,7 +21,7 @@ Generated input:
 #include<stdio.h>
 int main()
 {
-    int x[100][100],n,i,j,c=1,m,a=1,b,d=1;
+    int x[100][100],n,i,j,c=1,layer,a=1,b,d=1;
     printf("Please enter the size of array: ");scanf("%d",&n);
     printf("\nGenerated input: \n\n");
     for(i=1;i<=n;i++,printf("\n"))
@@ -31,10 +31,10 @@ int main()
                 printf("%2d ",x[i][j]);
             }
     
-    m=n/2;
+    layer=n/2;
     b=n;
     printf("\nSolved output: \n\n");
-    while(m)
+    while(layer)
     {
         for(i=a;i<b;i++,d++)
         {
@@ -63,7 +63,7 @@ int main()
         
         b--;
         a++;
-        m--;
+        layer--;
     }
     if(n%2)
      printf("%2d ",x[n/2+1][n/2+1]);
