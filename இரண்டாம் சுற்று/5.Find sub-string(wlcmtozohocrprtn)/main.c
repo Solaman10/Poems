@@ -1,14 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    char a[50],b[50][50],c[20];
+    char a[100],b[10][10],c[100];
     int l,i,j,k,co,f=1,d=1;
     
     printf("Enter the String: ");
     scanf("%s",a);
     printf("Enter the sub-string: ");
     scanf("%s",c);
-    
+    printf("\n");
     for(l=0;a[l];l++)
         while(d*d<l)d++;
     for(i=0;i<d;i++)
