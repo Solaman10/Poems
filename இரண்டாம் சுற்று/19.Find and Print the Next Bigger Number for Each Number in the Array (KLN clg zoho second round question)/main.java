@@ -4,49 +4,37 @@ Input : 8 4 1 9 6 2
 Output: 8->9  4->6  1->2  9->  2->4
 */
 
-import java.util.*;
+import java.util.Scanner;
 
-class Main
-{
-    public static void main (String[] args)
-    {
-        Scanner s = new Scanner(System.in);
-        System.out.print("Enter array size: ");
-        int n=s.nextInt();
-        int a[]=new int[n];
-        System.out.print("Input : ");
-        
-        for(int i=0;i<n;i++)
-        {
-            a[i]=s.nextInt();
+public class FindPrintGreaterNumforEveryElemnt {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt(),i,j,max=0,flag=0;
+        Scanner sca=new Scanner(System.in);
+        int[] arr = new int[n];
+        for(i=0;i<n;i++) {
+            arr[i] = sca.nextInt();
         }
-        
-        System.out.print("Output: ");
-        int sol=0,count=0;
-        for(int i=0;i<n;i++)
-        {
-            for(int j=0;j<n;j++)
-            {
-                if(a[i]<a[j])
-                {
-                    if(count==0)
-                    {
-                        sol=a[j];
-                        count=1;
+
+        for(i=0;i<n;i++) {
+            for(j=0;j<n;j++) {
+                if(arr[i]<arr[j]) {
+                    if(flag==0) {
+                        max=arr[j];
+                        flag=1;
                     }
-                    else
-                    {
-                        if(sol>a[j])
-                         sol=a[j];
+                    else if(max>arr[j]) {
+                        max=arr[j];
                     }
                 }
+
             }
-            if(sol==0)
-            System.out.print(a[i]+"->" +"  ");
+            if (max==0)
+                System.out.print(arr[i]+"->"+"  ");
             else
-            System.out.print(a[i]+"->"+sol+"  ");
-            count=0;
-            sol=0;
+                System.out.print(arr[i]+"->"+max+"  ");
+            flag=0;
+            max=0;
         }
     }
 }
