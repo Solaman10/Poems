@@ -16,22 +16,22 @@ import java.util.Scanner;
 public class nearstCubeRoot {
     public static void main(String[] args) {
 
-        int numbs = 1, preCub = 0, postCub = 0, preSqre=0, postSqre=0, difrnc1=0, difrnc2=0, num, i;
+        int numbs = 1, preCub = 0, postCub = 0, preSqre=0, postSqre=0, difrnc1=0, difrnc2=0, num, indx;
         Scanner sc = new Scanner(System.in);
         num = sc.nextInt();
 
-        for (i = numbs; i < num * 2;i=numbs*numbs*numbs)
+        for (indx = numbs; indx < num * 2;indx=numbs*numbs*numbs)
         {
-            if (i < num)
+            if (indx < num)
             {
-                preCub = i;
+                preCub = indx;
                 preSqre=numbs;
                 ++numbs;
                 postSqre=numbs;
             }
-            if (i > num)
+            if (indx > num)
             {
-                postCub = i;
+                postCub = indx;
                 break;
             }
         }
