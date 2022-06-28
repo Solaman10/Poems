@@ -1,6 +1,18 @@
 /*
-
-
+i/p:
+abcdefg
+a*de\g
+o/p: 
+yes
+--------
+i/p: 
+abcdefg
+a\de*g
+o/p: 
+no
+--------
+Note:  '\' Matches any single character
+       '*' Matches any sequence of characters 
 */
 
 import java.util.Scanner;
