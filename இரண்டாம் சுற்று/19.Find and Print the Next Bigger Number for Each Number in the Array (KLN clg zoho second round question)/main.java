@@ -1,7 +1,7 @@
 /*
 Input : 8 4 1 9 6 2
 
-Output: 8->9  4->6  1->2  9->  2->4
+Output: 8->9  4->6  1->2  9-> 6->8 2->4
 */
 
 import java.util.Scanner;
