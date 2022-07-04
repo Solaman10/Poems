@@ -25,7 +25,8 @@ public class maskMailPhone {
             S = S.toLowerCase();
             return (S.charAt(0) + "*****" + S.substring(at - 1)).toLowerCase();
         }
-        S = S.replaceAll("[^0-9]", "");
+        S = S.replaceAll("[^0-9]", "");                                             //("[^0-9]") -> to remove all symbols like +-(),etc.
+                                                                                   //("[0-9]") -> to remove all numbers
         return countryCode + "*****" + S.substring(S.length() - 4);
     }
 
