@@ -17,7 +17,9 @@ Explanation: 1->2->4->5
 */
 
 
+
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class cycleOccurOrNot {
@@ -28,20 +30,18 @@ public class cycleOccurOrNot {
         Scanner sc = new Scanner(System.in);
         pairs = sc.nextInt();
 
-        LinkedHashMap<Integer, Integer> hmap = new LinkedHashMap<>();
+        LinkedList<Integer> lList = new LinkedList<Integer>();
 
-        for(i=0;i<pairs;i++)
+        for(i=0;i<pairs*2;i++)
         {
             key = sc.nextInt();
-            value = sc.nextInt();
-
-            hmap.put(key, value);
+            lList.add(key);
         }
 
-        if(hmap.keySet().toArray()[0].equals(hmap.values().toArray()[pairs-1]))
+
+        if(lList.get(0)==lList.get(pairs*2-1))
             System.out.println("Yes");
         else
             System.out.println("No");
-
         }
 }
