@@ -26,19 +26,19 @@ public class doAndErase
             {
                 if(j==size)
                 {
-                    System.out.printf("%6d",i);
+                    System.out.printf("%3d",i);
                     prntVal=i;
 
                     for(k=size-i+2;k<=size;k++)
                     {
                         prntVal=prntVal+addVal;
-                        System.out.printf("%6d",prntVal);
+                        System.out.printf("%3d",prntVal);
                         addVal--;
                     }
                     System.out.println();
                 }
                 else
-                    System.out.print("      ");
+                    System.out.print("   ");
             }
         }
     }
