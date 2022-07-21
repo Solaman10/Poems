@@ -24,11 +24,10 @@ public class rmveCmnFrgmnt{
 
         StringBuilder sb = new StringBuilder();
 
-        for(int i=0;i<words1.length;i++){
-            for(int j=0;j<words2.length;j++){
-                for(int k=0;k<words3.length;k++){
-                    if(words1[i].equals(words2[j]) && words2[j].equals(words3[k])
-                            &&words3[k].equals(words1[i])){
+        for(int i=0;i<words1.length;i++) {
+            for(int j=0;j<words2.length;j++) {
+                for(int k=0;k<words3.length;k++) {
+                    if(words1[i].equals(words2[j]) && words2[j].equals(words3[k]) && words3[k].equals(words1[i])) {
                         //Concatenating the returned Strings
                         sb.append(words1[i]+" ");
                     }
