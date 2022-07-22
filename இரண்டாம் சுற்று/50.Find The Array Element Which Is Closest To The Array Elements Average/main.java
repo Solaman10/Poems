@@ -18,7 +18,7 @@ Closest element to average is: 18
 
 import java.util.*;
 
-public class roughClass {
+public class clstToAverage {
 
     public static void main(String[] args) {
 
