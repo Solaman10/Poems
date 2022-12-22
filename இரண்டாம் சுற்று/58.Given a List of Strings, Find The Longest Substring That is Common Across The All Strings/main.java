@@ -39,10 +39,14 @@ public class listOfStrngFindComnSubStr {
                     flag = false;
             }
             if(str.length()>=3)
-                prev = str;
+            {
+                prev = "(";
+                prev += str;
+            }
             index = 1;
         }
-        if(!prev.isEmpty())
+        prev+=")";
+        if(prev.length()>=3)
             return prev;
         else
             return "";
