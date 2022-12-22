@@ -9,7 +9,7 @@ i/p:
 tourist florist purest fairest
 
 o/p:                                // Here the common substring between these 4 String is "st". but, it's length is less than 3
-()                                 // The constrain that common substring's length should be atleast 3 Character
+()                                 // The one of constrain is that common substring's length should be atleast 3 Character
 */
 
 import java.util.ArrayList;
