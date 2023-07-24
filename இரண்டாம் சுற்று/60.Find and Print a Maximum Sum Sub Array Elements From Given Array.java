@@ -7,8 +7,6 @@ o/p:
 
 */
 
-
-
 public class maximumSumAndSubArrayElements {
     
     public static int[] maxSubArray(int[] nums) {
