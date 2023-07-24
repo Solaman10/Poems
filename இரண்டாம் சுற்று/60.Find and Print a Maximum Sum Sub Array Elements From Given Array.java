@@ -41,7 +41,7 @@ public class maximumSumAndSubArrayElements {
         int size = sc.nextInt();
         int[] nums = new int[size];
         for(int i=0;i<size;i++)
-          nums[i] = sc.nextInt();
+            nums[i] = sc.nextInt();
           
         int[] ans = maxSubArray(nums);
         int start=ans[1],end=ans[2];
