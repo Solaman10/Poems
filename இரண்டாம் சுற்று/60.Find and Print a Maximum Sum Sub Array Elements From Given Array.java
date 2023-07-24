@@ -7,23 +7,26 @@ o/p:
 
 */
 
+import java.util.Scanner;
+
 public class maximumSumAndSubArrayElements {
-    
+
     public static int[] maxSubArray(int[] nums) {
         int max = nums[0],sum=0, start = 0,end = 0,currStart = 0;
 
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
 
+            if (sum < 0) {
+                sum = 0;
+                currStart = i + 1;
+                continue;
+            }
+
             if (sum > max) {
                 max = sum;
                 start = currStart;
                 end = i;
-            }
-
-            if (sum < 0) {
-                sum = 0;
-                currStart = i + 1;
             }
         }
 
@@ -42,7 +45,7 @@ public class maximumSumAndSubArrayElements {
         int[] nums = new int[size];
         for(int i=0;i<size;i++)
             nums[i] = sc.nextInt();
-          
+
         int[] ans = maxSubArray(nums);
         int start=ans[1],end=ans[2];
 
