@@ -61,11 +61,11 @@ public class Main {
 			if(permutations.indexOf(s) == -1)
 			  permutations.add(s);
 		} 
-    else {
+    		else {
 			for(int i=left;i<=right;i++) {
-  				s = swap(s, left, i);
-  				printPermutations(s, left+1, right);
-  				s = swap(s, left, i);
+				s = swap(s, left, i);
+				printPermutations(s, left+1, right);
+				s = swap(s, left, i);
 			}
 		}
 	}
