@@ -45,7 +45,7 @@ public class Main {
         // int[] arr = {8, 3, 4, 7, 9, 3, 3, 1, 4, 5, 10};
         // int target = 10;
         Set<List<Integer>> combinations = new HashSet<>();
-        backtrack(arr, target,0,new ArrayList<Integer>(),combinations);
+        backtrack(arr, target,0, new ArrayList<Integer>(), combinations);
 
         for (List<Integer> combination : combinations)
             System.out.println(combination);
