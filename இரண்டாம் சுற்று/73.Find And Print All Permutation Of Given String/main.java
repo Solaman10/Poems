@@ -17,7 +17,7 @@ CA
 CAB
 CB
 CBA
-(Similar like following output, but ever word is printed in ascending order:
+(Similar like following output, but every word is printed in ascending order:
   A
   B C
   AB AC BA BC CA CB
