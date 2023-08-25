@@ -111,29 +111,29 @@ public class allPermutationsOfGvnString {
     }
 
     public static void generatePermutationsAndCombinations(String str) {
-        int n = str.length();
+        int len = str.length();
 
-        for (int i = 0; i < Math.pow(2, n); i++) {
+        for (int i = 0; i < Math.pow(2, len); i++) {
             StringBuilder permutation = new StringBuilder();
 
-            for (int j = 0; j < n; j++)
+            for (int j = 0; j < len; j++)
                 if ((i / (int)Math.pow(2, j)) % 2 == 1)
                     permutation.append(str.charAt(j));
 
-            printPermutations("", permutation.toString());
+            addPermutation("", permutation.toString());
         }
     }
 
 
-    public static void printPermutations(String prefix, String remaining) {
-        int n = remaining.length();
+    public static void addPermutation(String prefix, String remaining) {
+        int len = remaining.length();
 
-        if (n == 0) {
+        if (len == 0) {
             set.add(prefix);
             return;
         }
 
-        for (int i = 0; i < n; i++)
-            printPermutations(prefix + remaining.charAt(i), remaining.substring(0, i) + remaining.substring(i + 1, n));
+        for (int i = 0; i < len; i++)
+            addPermutation(prefix + remaining.charAt(i), remaining.substring(0, i) + remaining.substring(i + 1, len));
     }
 }
