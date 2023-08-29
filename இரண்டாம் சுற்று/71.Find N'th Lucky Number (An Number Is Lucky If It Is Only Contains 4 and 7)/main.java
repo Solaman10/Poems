@@ -23,7 +23,7 @@ public static void main(String[] args)
     int N,indx=2,itr;
     System.out.print("Enter the n value: ");
     N = sc.nextInt();
-    int[] a=new int[(N*2)+3];
+    int[] a=new int[N+3];
     a[1] = 4;
     a[2] = 7;
     
