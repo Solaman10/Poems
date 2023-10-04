@@ -36,9 +36,7 @@ public class lookAndSay {
                     count=1;
                 }
                 else
-                {
                     ++count;
-                }
             }
             System.out.println(count+" "+tempChar+" ");
             newStr=newStr+count+tempChar;
